@@ -1,4 +1,5 @@
 use std::fs;
+mod file_read;
 
 fn main() {
     let mut paths = fs::read_dir("./").unwrap();
@@ -18,10 +19,6 @@ fn main() {
 
     }
 
-    println!("Filenames are ");
-    for elem in filenames{
-        println!("{}",elem);
-    }
 
 
 }
