@@ -19,6 +19,14 @@ fn main() {
 
     }
 
+    for elem in filenames{
+        if elem==String::from(".git") {
+            continue;
+        }
+        let file_data = file_read::get_data(elem.clone());
+        println!("\n\n\t\t ---  Data of {} ---\n{} ",elem,file_data);
+
+    }
 
 
 }
