@@ -36,7 +36,6 @@ fn main() {
             continue;
         }
         let file_data = file_read::get_data(elem.clone());
-        println!("\n\n\t\t ---  Data of {}",elem);
         let mut chunks=string_divider::get_chunks(file_data,elem.clone());
         files_data.push(chunks);
         // for chunk in chunks {
