@@ -4,18 +4,29 @@ use std::fmt::format;
 pub struct line{
     number:u32,
     data:String,
+    filename:String,
 
 }
 
 impl line {
 pub fn get_print_data(&self)->String{
-    format!("{} ::  {}",self.number,self.data)
+    format!("{} :: {} ::  {}",self.filename,self.number,self.data)
     
 }
+pub fn contains_data(&self,substr:String)->bool{
+    if self.data.contains(&substr){
+        return true;
+    }
+    else {
+        return false;
+    }
 
 }
 
-pub fn get_chunks(string:String )->Vec<line>{
+
+}
+
+pub fn get_chunks(string:String,fname:String )->Vec<line>{
     let mut chunkSize = 40;
     let stringLength = string.len();
     let mut i=0;
@@ -38,7 +49,7 @@ pub fn get_chunks(string:String )->Vec<line>{
     let mut line_number=1;
     for s in split {
         let data =s.to_string();
-        let theLine=line{number:line_number,data:data.clone()};
+        let theLine=line{filename:fname.clone(),number:line_number,data:data.clone()};
         pieces.push(theLine);
         
         line_number+=1;
