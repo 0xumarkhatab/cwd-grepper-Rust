@@ -1,5 +1,5 @@
 # Command Line Based Rust Grepper
-##### A Program that searchces for a User input word in the current working directory and Returns the exact line it has been found.
+##### A Rust Program that searches for a particualar string of data in all the files contained in the current working directory and Returns the location information.
 
 
 ### Project Illustrtion
