@@ -1,4 +1,4 @@
-### cwd-grepper-Rust
+# Command Line Based Rust Grepper
 ##### A Program that searchces for a User input word in the current working directory and Returns the exact line it has been found.
 
 
